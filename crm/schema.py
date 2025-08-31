@@ -1,9 +1,9 @@
-from crm.models import Product
 import graphene
 from graphene_django import DjangoObjectType
 from django.utils import timezone
 from datetime import timedelta
 from crm_app.models import Customer, Product, Order
+from crm.models import Product
 
 
 class CustomerType(DjangoObjectType):

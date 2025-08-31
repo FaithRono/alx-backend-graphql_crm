@@ -53,7 +53,9 @@ def update_low_stock():
         # Log the updates
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         log_dir = tempfile.gettempdir()
-        log_file = os.path.join(log_dir, 'low_stock_updates_log.txt')
+        # log_file = os.path.join(log_dir, 'low_stock_updates_log.txt')
+        
+        log_file = '/tmp/low_stock_updates_log.txt'
         
         with open(log_file, 'a') as f:
             f.write(f"{timestamp} - Low stock update executed\n")
