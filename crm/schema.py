@@ -1,3 +1,4 @@
+from crm.models import Product
 import graphene
 from graphene_django import DjangoObjectType
 from django.utils import timezone
