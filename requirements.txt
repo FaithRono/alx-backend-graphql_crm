@@ -1,0 +1,8 @@
+Django>=4.2
+graphene-django>=3.0
+django-crontab
+gql[aiohttp]
+celery>=5.3
+django-celery-beat
+redis
+requests
