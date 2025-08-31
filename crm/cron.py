@@ -3,16 +3,12 @@ import tempfile
 from datetime import datetime
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
-
 def log_crm_heartbeat():
     """Log CRM heartbeat and optionally verify GraphQL endpoint"""
     timestamp = datetime.now().strftime('%d/%m/%Y-%H:%M:%S')
     
-    # Log basic heartbeat
-    log_dir = tempfile.gettempdir()
-    log_file = os.path.join(log_dir, 'crm_heartbeat_log.txt')
-    
-    with open(log_file, 'a') as f:
+    # Log basic heartbeat to the exact required path
+    with open('/tmp/crm_heartbeat_log.txt', 'a') as f:
         f.write(f"{timestamp} CRM is alive\n")
     
     # Optionally query the GraphQL hello field to verify endpoint is responsive
